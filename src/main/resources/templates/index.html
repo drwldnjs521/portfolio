@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" data-th-href="@{/css/style.css}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      data-th-href="@{/css/mediaqueries.css}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
+    
+
+    <title>JEEWON | PORTFOLIO</title>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">JEEWON LEE</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">EXPERIENCE</a></li>
+          <li><a href="#">PROJECT</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">JEEWON LEE</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#" onclick="toggleMenu()">ABOUT</a></li>
+          <li><a href="#" onclick="toggleMenu()">EXPERIENCE</a></li>
+          <li><a href="#" onclick="toggleMenu()">PROJECT</a></li>
+          <li><a href="#" onclick="toggleMenu()">CONTACT</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section-pic-container">
+        <img th:src="@{/images/profile.jpg}" alt="profile" />
+      </div>
+      <div class="section-text">
+        <p class="section-text-p1">Hello, I'm</p>
+        <h1 class="main-name">JEEWON LEE</h1>
+        <p class="section-text-p2">Software Developer</p>
+        <div class="btn-container">
+            <button class="btn btn-color-2" onclick="location.href='./#contact'">Contact Info</button>
+        </div>
+        <div id="socials-container">
+          <img
+            th:src="@{/images/linkedin.png}"
+            alt="linkedin"
+            class="icon"
+            onclick="location.href='https:\/\/linkedin.com/in/jeewon-lee-116422212/'"
+          />
+          <img
+            th:src="@{/images/github.png}"
+            alt="github"
+            class="icon"
+            onclick="location.href='https:\/\/github.com/drwldnjs521'"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+  <script th:src="@{/js/script.js}"></script>
+</html>
